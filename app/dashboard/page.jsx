@@ -1,20 +1,11 @@
-"use client";  // This tells Next.js to treat this file as a client component
+"use client";
 
-import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import YourComponent from './YourComponent';  // Make sure this path is correct
+import { Suspense } from 'react';
+import YourComponent from './YourComponent';  // Ensure the path is correct
 
 function DashboardPage() {
-  const [isClient, setIsClient] = useState(false);
   const searchParams = useSearchParams();
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <div>
