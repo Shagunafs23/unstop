@@ -9,10 +9,11 @@ function DashboardPage() {
   }, []);
 
   if (!isClient) {
-    return <div>Loading...</div>; // or a static loading UI for SSR
+    return <div>Loading...</div>;  // or any fallback for SSR
   }
 
   const searchParams = useSearchParams();
+
   return (
     <div>
       <h1>Dashboard</h1>
