@@ -1,3 +1,5 @@
+"use client"; // Add this directive at the top of the file
+
 import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import YourComponent from './YourComponent'; // Ensure this path is correct
@@ -11,7 +13,7 @@ function DashboardPage() {
   }, []);
 
   if (!isClient) {
-    return <div>Loading...</div>; // Fallback for server-side rendering (SSR)
+    return <div>Loading...</div>; // Fallback for SSR
   }
 
   return (
