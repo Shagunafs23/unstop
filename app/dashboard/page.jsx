@@ -1,18 +1,7 @@
-// At the top of your file
-'use client';
+import Dashboard from "../_components/Dashboard";
 
-import React from 'react';
-import { useSearchParams } from 'next/navigation';
-
-const DashboardPage = () => {
-  const searchParams = useSearchParams();
-  // Your logic here...
-
-  return (
-    <div>
-      {/* Your component rendering */}
-    </div>
-  );
+const Page = () => {
+  return <Dashboard />;
 };
 
-export default DashboardPage;
+export default Page;
