@@ -1,4 +1,7 @@
-import React, { Suspense } from 'react';
+// At the top of your file
+'use client';
+
+import React from 'react';
 import { useSearchParams } from 'next/navigation';
 
 const DashboardPage = () => {
@@ -12,10 +15,4 @@ const DashboardPage = () => {
   );
 };
 
-const DashboardWithSuspense = () => (
-  <Suspense fallback={<div>Loading...</div>}>
-    <DashboardPage />
-  </Suspense>
-);
-
-export default DashboardWithSuspense;
+export default DashboardPage;
