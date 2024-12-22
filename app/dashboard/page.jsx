@@ -1,8 +1,8 @@
-"use client"; // Required for React hooks like useEffect
+"use client";  // This marks the component as a client component
 
 import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import YourComponent from './YourComponent'; // Check if this path is correct
+import YourComponent from './YourComponent'; // Make sure the path is correct
 
 export default function DashboardPage() {
   const [isClient, setIsClient] = useState(false);
@@ -26,6 +26,7 @@ export default function DashboardPage() {
     </div>
   );
 }
+
 
 
 
