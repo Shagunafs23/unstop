@@ -1,7 +1,21 @@
-import Dashboard from "../_components/Dashboard";
+import React, { Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 
-const Page = () => {
-  return <Dashboard />;
+const DashboardPage = () => {
+  const searchParams = useSearchParams();
+  // Your logic here...
+
+  return (
+    <div>
+      {/* Your component rendering */}
+    </div>
+  );
 };
 
-export default Page;
+const DashboardWithSuspense = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <DashboardPage />
+  </Suspense>
+);
+
+export default DashboardWithSuspense;
