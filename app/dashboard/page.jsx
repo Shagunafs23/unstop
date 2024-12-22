@@ -1,10 +1,10 @@
-"use client"; // This directive must be at the top of the file
+"use client"; // Ensure this directive is at the top
 
 import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import YourComponent from './YourComponent'; // Ensure this path is valid
+import YourComponent from './YourComponent'; // Verify the path is correct
 
-function DashboardPage() {
+export default function DashboardPage() {
   const [isClient, setIsClient] = useState(false);
   const searchParams = useSearchParams();
 
@@ -13,7 +13,7 @@ function DashboardPage() {
   }, []);
 
   if (!isClient) {
-    return <div>Loading...</div>; // Fallback UI for SSR
+    return <div>Loading...</div>;
   }
 
   return (
@@ -26,5 +26,6 @@ function DashboardPage() {
     </div>
   );
 }
+
 
 export default DashboardPage;
