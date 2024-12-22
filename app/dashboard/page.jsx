@@ -1,12 +1,7 @@
-import React, { Suspense } from 'react';
-import MyComponent from './MyComponent';
+import Dashboard from "../_components/Dashboard";
 
-const DashboardPage = () => {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <MyComponent />
-    </Suspense>
-  );
+const Page = () => {
+  return <Dashboard />;
 };
 
-export default DashboardPage;
+export default Page;
