@@ -1,8 +1,9 @@
-import { Suspense } from 'react';
+import React from 'react'
 
-export default function DashboardPage() {
+function page() {
   return (
-    <Suspense fallback={<div>Loading dashboard...</div>}>
-    </Suspense>
-  );
+    <div>page</div>
+  )
 }
+
+export default page
