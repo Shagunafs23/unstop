@@ -1,10 +1,24 @@
-import { Suspense } from 'react';
-import YourComponent from './YourComponent';
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 
-export default function DashboardPage() {
+function DashboardPage() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return <div>Loading...</div>; // or a static loading UI for SSR
+  }
+
+  const searchParams = useSearchParams();
   return (
-    <Suspense fallback={<div>Loading dashboard...</div>}>
-      <YourComponent />
-    </Suspense>
+    <div>
+      <h1>Dashboard</h1>
+      <p>Search Parameter: {searchParams.get('param')}</p>
+    </div>
   );
 }
+
+export default DashboardPage;
