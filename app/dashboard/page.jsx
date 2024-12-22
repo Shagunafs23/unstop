@@ -1,8 +1,8 @@
-"use client"; // Ensure this directive is at the top
+"use client"; // Required for React hooks like useEffect
 
 import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import YourComponent from './YourComponent'; // Verify the path is correct
+import YourComponent from './YourComponent'; // Check if this path is correct
 
 export default function DashboardPage() {
   const [isClient, setIsClient] = useState(false);
@@ -26,6 +26,7 @@ export default function DashboardPage() {
     </div>
   );
 }
+
 
 
 export default DashboardPage;
